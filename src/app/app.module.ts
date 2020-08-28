@@ -4,12 +4,17 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { BienvenidoComponent } from './bienvenido/bienvenido.component';
+import { LoginComponent } from './login/login.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroDetailComponent
+   
+    BienvenidoComponent,
+    LoginComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
