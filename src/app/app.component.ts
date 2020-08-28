@@ -8,16 +8,27 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-dream-app';
 
-public ejemplo = 'Hola Mundo';
-public ejemplo2 = 'Hola Mundo';
-constructor() { }
+  public edad1 = "";
+  public edad2 = "";
+  public ResultadoSuma= "";
+  public ResultadoPromedio= "";
+  constructor() { }
 
-ngOnInit() {
-}
+  ngOnInit() {
+  }
 
-PruebaClick() {
-  this.ejemplo2 = 'Ejecutamos el evento!!!';
-}
+  CalcularClick() {
+    this.ResultadoSuma = (parseFloat(this.edad1) + parseFloat(this.edad2)).toString();
+    this.ResultadoPromedio = ((parseFloat(this.edad1) + parseFloat(this.edad2))/2.0).toString();
+  }
+  
+  LimpiarClick() {
+    this.edad1 = "";
+    this.edad2 = "";
+    this.ResultadoSuma = "";
+    this.ResultadoPromedio = "";
+  }
+  
 
 }
 
