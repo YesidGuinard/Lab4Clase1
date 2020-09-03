@@ -1,0 +1,30 @@
+
+<br>
+<div class="container">
+
+  <div class="row ">
+    <aside class="col-sm-6">
+      <div class="card">
+        <article class="card-body">
+          <h1>Ejercicio 1 Clase Lab 04 Yesid Dario Guinard</h1>
+
+          <p>Ingrese Edad Uno</p>
+          <input type="number" class="form-control" [(ngModel)]="edadUno">
+
+          <p>Ingrese Edad Dos</p>
+          <input type="number" class="form-control" [(ngModel)]="edadDos">
+
+          <button class="btn btn-primary my-2" (click)="CalcularClick()">Calcular</button>
+          <button class="btn btn-secondary my-2" (click)="LimpiarClick()">Limpiar Inputs</button>
+          <p>Resultado Suma:{{ResultadoSuma}}</p>
+          <p>Resultado Promedio:{{ResultadoPromedio}}</p>
+
+
+        </article>
+      </div> <!-- card.// -->
+
+    </aside> <!-- col.// -->
+
+  </div> <!-- row.// -->
+
+</div>
