@@ -4,18 +4,21 @@ import {BienvenidoComponent} from "./bienvenido/bienvenido.component";
 import {LoginComponent} from "./login/login.component";
 import {ErrorComponent} from "./error/error.component";
 import {EjerciciosComponent} from "./ejercicios/ejercicios.component";
+import {DashboardComponent} from "./dashboard/dashboard.component";
 
 const routes: Routes = [
   {path: 'bienvenido', component: BienvenidoComponent},
+  {path: '', component: BienvenidoComponent},
   {path: 'login', component: LoginComponent},
   {path: 'ejercicios', component: EjerciciosComponent},
-  {path: 'error', component: ErrorComponent},
-  {path: '', component: BienvenidoComponent, pathMatch: 'full'},
+  {path: 'dash', component: DashboardComponent},
+  {path: '**', component: ErrorComponent}
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,
-    {enableTracing:true})],
+    {enableTracing:false})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
