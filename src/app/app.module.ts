@@ -10,6 +10,8 @@ import { ErrorComponent } from './error/error.component';
 import { MenuComponent } from './menu/menu.component';
 import { EjerciciosComponent } from './ejercicios/ejercicios.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ControlEntidadComponent } from './componentes/control-entidad/control-entidad.component';
+import { ListadoEntidadComponent } from './componentes/listado-entidad/listado-entidad.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ErrorComponent,
     MenuComponent,
     EjerciciosComponent,
-    DashboardComponent
+    DashboardComponent,
+    ControlEntidadComponent,
+    ListadoEntidadComponent
   ],
   imports: [
     BrowserModule,
