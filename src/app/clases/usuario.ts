@@ -1,4 +1,10 @@
 export class Usuario {
-    email: string;
-    pass: string;
+  id: number;
+  email: string;
+  pass: string;
+  Sexo: string;
+  Nombre: string;
+  Apellido: string;
+  FechaNac: string;
+  FotoPerfil: string;
 }

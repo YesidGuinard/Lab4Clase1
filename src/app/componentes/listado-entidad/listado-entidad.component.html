@@ -1,1 +1,28 @@
-<p>listado-entidad works!</p>
+
+<table class="table table-hover" >
+  <thead>
+  <tr>
+
+    <th style="text-align: left;">Nombre</th>
+    <th style="text-align: left;">Apellido</th>
+    <th style="text-align: left;">Email</th>
+    <th style="text-align: left;">Sexo</th>
+    <th style="text-align: left;">Imagen</th>
+    <th style="text-align: left;">FechaNac</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let dato of listadoUsuarios">
+
+    <td >{{dato.Nombre}}</td>
+    <td >{{dato.Apellido}}</td>
+    <td >{{dato.email}}</td>
+
+    <td>{{dato.Sexo}}</td>
+    <td>
+      <img [src]="dato.FotoPerfil" alt="" style="width: 50px; height: 50px;">
+    </td>
+    <td >{{dato.FechaNac}}</td>
+  </tr>
+  </tbody>
+</table>

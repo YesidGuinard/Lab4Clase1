@@ -12,11 +12,12 @@ import { EjerciciosComponent } from './ejercicios/ejercicios.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ControlEntidadComponent } from './componentes/control-entidad/control-entidad.component';
 import { ListadoEntidadComponent } from './componentes/listado-entidad/listado-entidad.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
-   
+
     BienvenidoComponent,
     LoginComponent,
     ErrorComponent,
@@ -29,7 +30,8 @@ import { ListadoEntidadComponent } from './componentes/listado-entidad/listado-e
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

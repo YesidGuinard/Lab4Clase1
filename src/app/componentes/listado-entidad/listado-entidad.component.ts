@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-listado-entidad',
@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listado-entidad.component.css']
 })
 export class ListadoEntidadComponent implements OnInit {
-
+  @Input() listadoUsuarios: any;
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.listadoUsuarios);
   }
 
 }
