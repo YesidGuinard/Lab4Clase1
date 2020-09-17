@@ -1,28 +1,32 @@
-
-<table class="table table-hover" >
+<table class="table">
   <thead>
-  <tr>
+  <tr scope="row">
 
-    <th style="text-align: left;">Nombre</th>
-    <th style="text-align: left;">Apellido</th>
-    <th style="text-align: left;">Email</th>
-    <th style="text-align: left;">Sexo</th>
-    <th style="text-align: left;">Imagen</th>
-    <th style="text-align: left;">FechaNac</th>
+    <th scope="col">Nombre</th>
+    <th scope="col">Apellido</th>
+    <th sscope="col">Email</th>
+    <th scope="col">Sexo</th>
+    <th scope="col">Imagen</th>
+    <th scope="col">FechaNac</th>
+    <th scope="col">Accion</th>
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let dato of listadoUsuarios">
+  <tr scope="row" *ngFor="let user of listadoUsuarios">
 
-    <td >{{dato.Nombre}}</td>
-    <td >{{dato.Apellido}}</td>
-    <td >{{dato.email}}</td>
+    <td >{{user.Nombre}}</td>
+    <td >{{user.Apellido}}</td>
+    <td >{{user.email}}</td>
 
-    <td>{{dato.Sexo}}</td>
+    <td>{{user.Sexo}}</td>
     <td>
-      <img [src]="dato.FotoPerfil" alt="" style="width: 50px; height: 50px;">
+      <img [src]="user.FotoPerfil" alt="" style="width: 50px; height: 50px;">
     </td>
-    <td >{{dato.FechaNac}}</td>
+    <td >{{user.FechaNac}}</td>
+    <td>
+      <button (click)="onSelectUsuario(user)" >Seleccionar</button>
+    </td>
   </tr>
   </tbody>
 </table>
+

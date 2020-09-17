@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Usuario} from "../../clases/usuario";
-import { UsuariosService } from '../../servicios/usuarios.service';
+import {UsuariosService} from '../../servicios/usuarios.service';
 
 @Component({
   selector: 'app-control-entidad',
@@ -8,21 +8,32 @@ import { UsuariosService } from '../../servicios/usuarios.service';
   styleUrls: ['./control-entidad.component.css']
 })
 export class ControlEntidadComponent implements OnInit {
-  usuario = new Usuario();
-  listadoPrincipal: any;
+  listadoPrincipal: Usuario[] = [];
+  selectedItem: Usuario;
 
 
-  constructor(private usuarios:UsuariosService) { }
-
-  ngOnInit(): void {
-    this.usuarios.obtenerUsers().subscribe(resultado => {
-      console.log('Resultado Usuarios');
-      console.log(resultado);
-      this.listadoPrincipal=resultado;
-    }, error => {
-      console.log('Error');
-    });
-
+  constructor(private usuarios: UsuariosService) {
   }
 
+  ngOnInit(): void {
+    this.usuarios.obtenerUsers().subscribe(
+      (data: Usuario[]) => {
+        this.listadoPrincipal = data;
+      },
+      (err: Error) => {
+        console.log("Fail service", err);
+      }
+    );
+  }
+
+  onEventSelectedItem(usuario) {
+    this.selectedItem = usuario
+  }
+
+  onEventDeletedItem($event: Usuario) {
+    this.listadoPrincipal = this.listadoPrincipal.filter((p) => p != $event);
+    this.selectedItem = null;
+    console.log("deleted: ", $event);
+
+  }
 }

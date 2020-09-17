@@ -1,0 +1,12 @@
+<p>detalle-entidad works!</p>
+
+
+<div *ngIf="selectedItem" class="seleccion">
+ <h1>Usuario seleccionada</h1>
+  <h3>{{selectedItem.Apellido}} {{selectedItem.Nombre}}</h3>
+  <img [src]="selectedItem.FotoPerfil" alt="" style="width: 50px; height: 50px;">
+  <p>{{selectedItem.email}}</p>
+  <p>{{selectedItem.FechaNac}}</p>
+  <p>{{selectedItem.Sexo}}</p>
+  <button (click)="onDeleteUsuario(selectedItem)">Eliminar</button>
+</div>

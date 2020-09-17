@@ -1,8 +1,20 @@
 
-<div class="example-card">
-  <app-listado-entidad [listadoUsuarios]="listadoPrincipal"></app-listado-entidad>
-</div>
 
-<div class="example-card">
+<div class="flex row">
+  <div class="col-sm-9">
+    <div class="card">
+      <div class="card-body">
+        <app-listado-entidad [listadoUsuarios]="listadoPrincipal" (eventSelectedItem)="onEventSelectedItem($event)"></app-listado-entidad>
+      </div>
+    </div>
+  </div>
 
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <app-detalle-entidad [selectedItem]="selectedItem" (eventDeleteItem)="onEventDeletedItem($event)"></app-detalle-entidad>
+
+      </div>
+    </div>
+  </div>
 </div>

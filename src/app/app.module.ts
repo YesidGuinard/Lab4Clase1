@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ControlEntidadComponent } from './componentes/control-entidad/control-entidad.component';
 import { ListadoEntidadComponent } from './componentes/listado-entidad/listado-entidad.component';
 import {HttpClientModule} from "@angular/common/http";
+import { DetalleEntidadComponent } from './componentes/detalle-entidad/detalle-entidad.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {HttpClientModule} from "@angular/common/http";
     EjerciciosComponent,
     DashboardComponent,
     ControlEntidadComponent,
-    ListadoEntidadComponent
+    ListadoEntidadComponent,
+    DetalleEntidadComponent
   ],
   imports: [
     BrowserModule,
